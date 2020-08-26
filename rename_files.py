@@ -1,6 +1,7 @@
 import os
 
 def remove_first_characters(a):
+    # negative values would mess up the indexing
     a = abs(a)
     for i in sorted(os.listdir(os.getcwd())):
         name = os.path.splitext(i)[0]
@@ -12,4 +13,4 @@ def remove_first_characters(a):
 
 
 # remove the first 3 letters of every file in current directory that isnt a folder or a python script
-remove_first_characters(1)
+remove_first_characters(3)
